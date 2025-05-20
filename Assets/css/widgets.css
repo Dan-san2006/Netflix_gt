@@ -1,0 +1,161 @@
+.button {
+    /*border: 1px solid blue;*/ /* */
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 5px 1em 5px .5em;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    color: black;
+}
+
+.button::before {
+    /*border: 1px solid red;*/ /* */
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.button-secondary {
+    /*border: 1px solid red;*/ /* */
+    background: none;
+    color: white;
+    text-align: center;
+    font-size: 1.1em;
+    min-width: 100px;
+    cursor: pointer;
+    border: none;
+}
+
+.button-secondary::before {
+    /*border: 1px solid green;*/ /* */
+    display: block;
+    content: '';
+    width: 25px;
+    height: 25px;
+    margin: auto;
+    margin-bottom: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.icon-plus::before {
+    background-image: url(../../images/icons/plus.svg);
+}
+
+.icon-play::before {
+    background-image: url(../../images/icons/play.svg);
+}
+
+.icon-info::before {
+    background-image: url(../../images/icons/info.svg);
+}
+
+.tags {
+    /* border: 1px solid yellow; */ /* */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.tag {
+    /* border: 1px solid red; */ /* */
+    display: flex;
+    align-items: center;
+}
+
+.tag::before {
+    content: '◉';
+    margin-right: 10px;
+}
+
+.tag:first-child::before {
+    display: none;
+}
+
+/* -- Listas de Contenido (Películas/Series) -- */
+.list {
+    /*border: 1px solid green;*/ /* */
+    padding: 0 1em;
+}
+
+.list-tittle {
+    margin-left: 10px;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.list-content {
+    /*border: 1px solid red;*/ /* */
+    /*display: flex;*/ /* */
+    white-space: nowrap;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.list-item {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: top;
+}
+
+::-webkit-scrollbar { /* */
+    display: none;
+}
+
+.list-item:first-child {
+    margin: 0;
+}
+
+.list-item img {
+    display: block;
+    width: auto;
+    height: 250px;
+    border-radius: 5px;
+}
+
+.tab-list {
+    /*border: 1px solid green;*/ /* */
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    list-style: none;
+    color: #6e6e6e;
+    padding-bottom: 1em;
+}
+
+.tab-list a {
+    color: #6e6e6e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tab-item {
+
+    text-align: center;
+    font-size: .9em;
+}
+
+.tab-item svg {
+    display: block;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+.tab-icon path {
+    fill: #6e6e6e;
+}
+
+.tab-item:hover :is(path, span) {
+    fill: white;
+    color: white;
+}
